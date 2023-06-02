@@ -1,15 +1,17 @@
-﻿public class Starter
+﻿using System;
+
+public class Starter
 {
     public static void Start()
     {
         Random random = new Random();
 
-        LeafyVegetable lettuce = new LeafyVegetable("Lettuce", RandomCalories(), "Green");
-        LeafyVegetable spinach = new LeafyVegetable("Spinach", RandomCalories(), "Green");
-        OtherVegetable carrot = new OtherVegetable("Carrot", RandomCalories(), "Cylinder");
-        OtherVegetable radish = new OtherVegetable("Radish", RandomCalories(), "Round");
-        OtherVegetable cucumber = new OtherVegetable("Cucumber", RandomCalories(), "Cylinder");
-        OtherVegetable tomato = new OtherVegetable("Tomato", RandomCalories(), "Round");
+        LeafyVegetable lettuce = new LeafyVegetable("Lettuce", RandomCalories(), "Green","Small");
+        LeafyVegetable spinach = new LeafyVegetable("Spinach", RandomCalories(), "Green","Small");
+        OtherVegetable carrot = new OtherVegetable("Carrot", RandomCalories(), "Cylinder", "Medium");
+        OtherVegetable radish = new OtherVegetable("Radish", RandomCalories(), "Round", "Medium");
+        OtherVegetable cucumber = new OtherVegetable("Cucumber", RandomCalories(), "Cylinder", "Small");
+        OtherVegetable tomato = new OtherVegetable("Tomato", RandomCalories(), "Round", "Small");
         Sauce ketchapp = new Sauce("Ketchapp", RandomCalories());
         Sauce mayo = new Sauce("Mayo", RandomCalories());
 
@@ -35,16 +37,18 @@
         Console.WriteLine($"\nTotal calories in the salad: {totalCalories}");
 
         salad.SortIngredientsByParameter("calories");
-        Console.WriteLine("\nSorted ingredients by calories: \n");
+        Console.WriteLine("\nSorted ingredients by calories:\n");
         foreach (ISaladIngredient ingredient in salad.GetIngredients())
         {
             if (ingredient is ILeafyVegetable leafyVegetable)
             {
+                Console.Write($"{leafyVegetable.GetSize()} ");
                 Console.Write($"{leafyVegetable.GetColor()} ");
             }
 
             if (ingredient is IOtherVegetable otherVegetable)
             {
+                Console.Write($"{otherVegetable.GetSize()} ");
                 Console.Write($"{otherVegetable.GetShape()} ");
             }
 
@@ -57,11 +61,13 @@
         {
             if (ingredient is ILeafyVegetable leafyVegetable)
             {
+                Console.Write($"{leafyVegetable.GetSize()} ");
                 Console.Write($"{leafyVegetable.GetColor()} ");
             }
 
             if (ingredient is IOtherVegetable otherVegetable)
             {
+                Console.Write($"{otherVegetable.GetSize()} ");
                 Console.Write($"{otherVegetable.GetShape()} ");
             }
 
