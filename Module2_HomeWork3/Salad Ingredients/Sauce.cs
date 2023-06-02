@@ -1,4 +1,4 @@
-﻿public class Sauce : ISaladIngredient 
+﻿public class Sauce : ISaladIngredient
 {
     public string Name { get; }
     public int Calories { get; }

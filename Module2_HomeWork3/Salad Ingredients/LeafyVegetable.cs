@@ -1,35 +1,15 @@
-﻿public class LeafyVegetable : FreshVegetables, ILeafyVegetable
+﻿public class LeafyVegetable : FreshVegetable, ILeafyVegetable
 {
-    public string Name { get; }
-    public int Calories { get; }
     public string Color { get; }
-    public bool IsFreshVegetable { get; }
 
     public LeafyVegetable(string name, int calories, string color)
+        : base(name, calories)
     {
-        Name = name;
-        Calories = calories;
         Color = color;
-        IsFreshVegetable = FreshVegetable();
-    }
-
-    public string GetName()
-    {
-        return Name;
-    }
-
-    public int GetCalories()
-    {
-        return Calories;
     }
 
     public string GetColor()
     {
         return Color;
-    }
-
-    public bool FreshVegetable()
-    {
-        return new FreshVegetables().FreshVegetable();
     }
 }

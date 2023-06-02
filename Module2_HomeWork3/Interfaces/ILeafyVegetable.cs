@@ -1,4 +1,4 @@
-﻿public interface ILeafyVegetable : IFreshVegetable
+﻿public interface ILeafyVegetable
 {
     string GetColor();
     bool IsFreshVegetable { get; }
