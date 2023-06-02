@@ -1,10 +1,10 @@
-﻿public class OtherVegetable : FreshVegetable, IOtherVegetable
+﻿public class OtherVegetable : VegetableSize, IOtherVegetable
 {
     public string Shape { get; }
     public string Size { get; }
 
     public OtherVegetable(string name, int calories, string shape, string size)
-        : base(name, calories)
+        : base(name, calories, size)
     {
         Shape = shape;
         Size = size;

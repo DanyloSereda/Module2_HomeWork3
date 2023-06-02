@@ -1,10 +1,10 @@
-﻿public class LeafyVegetable : FreshVegetable, ILeafyVegetable
+﻿public class LeafyVegetable : VegetableSize, ILeafyVegetable
 {
     public string Color { get; }
     public string Size { get; }
 
     public LeafyVegetable(string name, int calories, string color, string size)
-        : base(name, calories)
+        : base(name, calories, size)
     {
         Color = color;
         Size = size;
