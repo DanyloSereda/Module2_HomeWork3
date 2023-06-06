@@ -1,4 +1,6 @@
-﻿public class Salad : ISaladIngredient
+﻿using System.Drawing;
+
+public class Salad : ISaladIngredient
 {
     private ISaladIngredient[] ingredients;
 

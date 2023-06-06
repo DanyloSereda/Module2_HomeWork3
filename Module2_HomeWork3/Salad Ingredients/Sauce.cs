@@ -1,9 +1,9 @@
-﻿public class LeafyVegetable : IVegetable
+﻿public class Sauce : ISaladIngredient
 {
     public string Name { get; }
     public int Calories { get; }
 
-    public LeafyVegetable(string name, int calories)
+    public Sauce(string name, int calories)
     {
         Name = name;
         Calories = calories;
